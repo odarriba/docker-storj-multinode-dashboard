@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/local/bin/identity create multinode --difficulty 1
