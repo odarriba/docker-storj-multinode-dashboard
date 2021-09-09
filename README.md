@@ -5,7 +5,8 @@ This repository contains an unooficial Docker image for running Multinode
 Dashboard in a Docker environment, within an orchestration software like K8s or
 using Docker Compose.
 
-You can find builds of this container named as odarriba/storj-multinode-dashboard
+You can find builds of this container named as
+[odarriba/storj-multinode-dashboard](https://hub.docker.com/r/odarriba/storj-multinode-dashboard)
 on Docker Hub.
 
 The container tag of those builds is the Storj version number used in the build.
