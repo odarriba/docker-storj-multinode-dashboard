@@ -3,7 +3,7 @@
 
 [![](https://img.shields.io/docker/v/odarriba/storj-multinode-dashboard?style=flat-square)](https://hub.docker.com/r/odarriba/storj-multinode-dashboard)
 
-This repository contains an unooficial Docker image for running Multinode
+This repository contains an unofficial Docker image for running Multinode
 Dashboard in a Docker environment, within an orchestration software like K8s or
 using Docker Compose.
 
