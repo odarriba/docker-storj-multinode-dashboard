@@ -9,7 +9,7 @@ using Docker Compose.
 
 You can find builds of this container named as
 [odarriba/storj-multinode-dashboard](https://hub.docker.com/r/odarriba/storj-multinode-dashboard)
-on Docker Hub.
+on Docker Hub, cross built for amd64, armv7 and armv8.
 
 The container tag of those builds is the Storj version number used in the build.
 
@@ -41,7 +41,7 @@ and start the service:
 $ docker run --rm \
     -v /PATH/TO/IDENTITY:/root/.local/share/storj/identity \
     -v /PATH/TO/CONFIG:/root/.local/share/storj/multinode \
-    -p 15002:15002 \
+    -p 127.0.0.1:15002:15002 \
     odarriba/storj-multinode-dashboard
 ```
 
@@ -72,3 +72,21 @@ are no longer localhost requests.
 **So it is strongly recommended that you avoid exposing this port to public Internet**
 to avoid having third parties looking at your dashboards and exploiting future
 attacks that may (or not) arise in Storj software.
+
+On the example above we are avoiding exposing the port to Internet using the
+parameter `-p 127.0.0.1:15002:15002`, but it can be easily changed at your own
+risk to expose it to outside your computer/server.
+
+## Development
+
+This image is ready to do make cross-architecture builds. I'm currently using
+`buildx` for that, using this command line:
+
+```
+$ docker buildx build --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --push --tag odarriba/storj-multinode-dashboard:1.37.2 .
+```
+
+However, this is not really necessary unless you are making this kind of builds.
+
+To build the container for your machine, just use the `docker build` command as
+usual.
