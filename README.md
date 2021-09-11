@@ -83,7 +83,7 @@ This image is ready to do make cross-architecture builds. I'm currently using
 `buildx` for that, using this command line:
 
 ```
-$ docker buildx build --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --push --tag odarriba/storj-multinode-dashboard:1.37.2 .
+$ docker buildx build --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --push --tag odarriba/storj-multinode-dashboard .
 ```
 
 However, this is not really necessary unless you are making this kind of builds.
