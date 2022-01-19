@@ -2,7 +2,7 @@ FROM alpine:3.14
 
 LABEL org.opencontainers.image.authors="Óscar de Arriba <odarriba@hey.com>"
 
-ARG STORJ_VERSION=1.37.2
+ARG STORJ_VERSION=1.46.3
 ARG ARCH=amd64
 
 WORKDIR /tmp
